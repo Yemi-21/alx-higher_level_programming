@@ -1,2 +1,2 @@
-#!/bin/bash/python3
-Best School
+#!/bin/bash
+python3 $PYFILE
