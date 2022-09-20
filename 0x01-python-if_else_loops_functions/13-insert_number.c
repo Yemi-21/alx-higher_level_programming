@@ -18,7 +18,6 @@ listint_t *createNode(const int prmNbr)
  * add_nodeint - adds a new node at the beginning of a list_t list
  * @head: pointer to last element
  * @n: number
- *
  * Return: new last element
  */
 listint_t *insert_node(listint_t **head, int number)
