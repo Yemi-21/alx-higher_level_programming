@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-""" read_file module """
+
 def read_file(filename=""):
-    """
-        function that read specific file
-        Args:
-            fileName: name of the file
-    """
-    with open(fileName, encoding="UTF-8") as file:
-        read_data = file.read()
-        print(read_data, end="")
-    file.closed
+
+    with open(filename, "r", encoding="UTF-8") as f:
+
+        print(f.read(), end="")
