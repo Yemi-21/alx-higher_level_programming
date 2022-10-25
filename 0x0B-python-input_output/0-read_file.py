@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-""" read_file module """
-
-
+"""read_file module """
 def read_file(filename=""):
     """
         function that read specific file
-
         Args:
             filename: name of the file
     """
