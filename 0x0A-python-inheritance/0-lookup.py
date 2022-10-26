@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ lookup module """
-def lookup(prmObj):
+
+
+def lookup(Obj):
         """ lookup function """
-            return list(dir(prmObj))
+            return list(dir(obj))
