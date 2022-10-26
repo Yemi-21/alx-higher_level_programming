@@ -2,6 +2,6 @@
 """ lookup module """
 
 
-def lookup(Obj):
+def lookup(obj):
         """ lookup function """
             return list(dir(obj))
