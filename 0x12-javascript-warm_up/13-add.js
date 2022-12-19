@@ -8,6 +8,7 @@
  *
  * @returns result of addition of two parameters
  */
- exports.add = function (a, b) {
+
+exports.add = function (a, b) {
   return (a + b);
 };
