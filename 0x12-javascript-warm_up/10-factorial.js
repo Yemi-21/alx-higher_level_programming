@@ -1,19 +1,13 @@
 #!/usr/bin/node
 
-/**
- * Computes factorial of a number
- * @param {*} a number
- * @returns factorial
- */
+// Factorial in Javascript
 
-function factorial (a) {
-  if (isNaN(a) || a === 0) {
-    return (1);
- }
-  return (factorial(a - 1) * a);
+function factorial (num) {
+  if (isNaN(num) || num < 2) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
+  }
 }
 
-/**
- * computes and prints a factorial
- */
 console.log(factorial(parseInt(process.argv[2])));
