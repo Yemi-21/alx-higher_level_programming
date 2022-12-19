@@ -1,14 +1,14 @@
 #!/usr/bin/node
 
-/**
- * Add two numbers
- *
- * @param {*} a first number
- * @param {*} b second number
- *
- * @returns result of addition of two parameters
- */
+// Print Javascript is amazing
 
-exports.add = function (a, b) {
-  return (a + b);
+function add (a, b) {
+  if (isNaN(a) || isNaN(b)) {
+    return NaN;
+  }
+  return parseInt(a, 10) + parseInt(b, 10);
+}
+
+module.exports = {
+  add
 };
