@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
-    script that lists all states with a name starting with N (upper N)
-    from the database hbtn_0e_0_usa
+    script that takes in an argument and displays all values in the states
+    table of hbtn_0e_0_usa where name matches the argument.
 """
-
 
 import MySQLdb
 import sys
@@ -11,8 +10,8 @@ import sys
 
 def main():
     """
-        lists all states with a name starting with N (upper N)
-        from the database hbtn_0e_0_usa
+        takes in an argument and displays all values in the states
+        table of hbtn_0e_0_usa where name matches the argument.
     """
     conn = MySQLdb.connect(
         host="localhost",
@@ -23,7 +22,9 @@ def main():
         charset="utf8"
     )
     cur = conn.cursor()
-    req = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
+    stName = sys.argv[4]
+    req = "SELECT *  FROM states WHERE BINARY name='{}'\
+         ORDER BY id ASC".format(sys.argv[4])
     cur.execute(req)
     query_rows = cur.fetchall()
     for row in query_rows:
