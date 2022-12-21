@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
     script that lists all State objects from the database hbtn_0e_6_usa
 """
@@ -28,6 +29,7 @@ def main():
     for state in query.all():
         print("{:d}: {}".format(state.id, state.name))
     session.close()
+
 
 if __name__ == "__main__":
     main()
