@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+
 """ Finds a peak in a list of unsorted integers
 """
+
+
 def find_peak(list_of_integers):
         """
         Args:
@@ -10,8 +13,10 @@ def find_peak(list_of_integers):
         size = len(list_of_integers)
         mid_e = size
         mid = size // 2
+
         if size == 0:
             return None
+        
         while True:
             mid_e = mid_e // 2
             if (mid < size - 1 and
