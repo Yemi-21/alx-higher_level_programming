@@ -5,8 +5,6 @@ script that fetches https://intranet.hbtn.io/status
 
 
 from urllib import request
-
-
 if __name__ == "__main__":
     with request.urlopen('https://intranet.hbtn.io/status') as response:
         content = response.read()
