@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Fetches https://intranet.hbtn.io/status"""
+
 import urllib.request
 def fetcher():
     """fetcher"""
