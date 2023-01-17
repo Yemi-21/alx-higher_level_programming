@@ -1,34 +1,14 @@
 #!/usr/bin/python3
-
 """
-script that get information about user from github api
+Takes in a string and sends a search request to the Star Wars API
 """
+if __name__ == "__main__":
+    import requests
+    from sys import argv
 
-
-import requests
-import sys
-
-
-    def is_valid_json(data) -> bool:
-    """
-    check if a data is a json
-    """
+    result = requests.get('https://api.github.com/user',
+            auth=(argv[1], argv[2]))
     try:
-        data.json()
-        return True
-    except Exception:
-        return False
-    if __name__ == "__main__":
-        try:
-            url = "https://api.github.com/user"
-            response = requests.get(url=url, auth=(sys.argv[1], sys.argv[2]))
-            if not is_valid_json(response):
-                print("Not a valid JSON")
-            else:
-                content = response.json()
-                if (len(content) == 0):
-                    print("No result")
-                else:
-                    print("{}".format(content.get("id")))
-        except requests.exceptions.HTTPError as exception:
-            print("Error code: {}".format(exception.response.status_code))
+        print(result.json()['id'])
+    except KeyError:
+        print("None")
